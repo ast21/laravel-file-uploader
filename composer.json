@@ -1,0 +1,25 @@
+{
+    "name": "aebitdev/laravel-file-uploader",
+    "description": "Package for file uploads",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anastas Mironov",
+            "email": "ast@l80.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Aebitdev\\FileUploader\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+              "Aebitdev\\FileUploader\\FileUploaderServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
