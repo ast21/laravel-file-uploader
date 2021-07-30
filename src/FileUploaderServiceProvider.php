@@ -10,17 +10,13 @@ class FileUploaderServiceProvider extends BaseServiceProvider
 
     public function register()
     {
-        $this->registerConfig();
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'file-uploader');
     }
 
     public function boot()
     {
         $this->registerRoutes();
-    }
-
-    public function registerConfig()
-    {
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'file-uploader');
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
     }
 
     public function registerRoutes()
