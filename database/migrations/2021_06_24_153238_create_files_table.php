@@ -6,15 +6,16 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateFilesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('files', function (Blueprint $table) {
             $table->id();
+
+            if (config('file-uploader.table')) {
+                $table->bigInteger('user_id')->nullable();
+                $table->foreign('user_id')->references('id')->on(config('file-uploader.table'));
+            }
+
             $table->string('name');
             $table->string('disk');
             $table->string('path');
@@ -27,11 +28,6 @@ class CreateFilesTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('files');
