@@ -12,7 +12,7 @@ class CreateFilesTable extends Migration
             $table->id();
 
             if (config('file-uploader.table')) {
-                $table->bigInteger('user_id')->nullable();
+                $table->unsignedBigInteger('user_id')->nullable();
                 $table->foreign('user_id')->references('id')->on(config('file-uploader.table'));
             }
 
