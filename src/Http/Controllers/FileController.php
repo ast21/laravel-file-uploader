@@ -2,12 +2,28 @@
 
 namespace Aebitdev\FileUploader\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Aebitdev\FileUploader\Http\Requests\FileUploadRequest;
+use Aebitdev\FileUploader\Http\Services\FileService;
+use Aebitdev\FileUploader\Models\File;
 
 class FileController extends Controller
 {
-    public function upload(Request $request)
+    protected $file;
+    protected $fileService;
+
+    public function __construct(File $file, FileService $fileService)
     {
-        return response()->json(['file' => $request->hasFile('file')]);
+        $this->file = $file;
+        $this->fileService = $fileService;
+    }
+
+    public function upload(FileUploadRequest $request)
+    {
+        $file = $this->fileService->upload($request->file('file'));
+
+        return response()->json([
+            'id' => $file->id,
+            'url' => asset($file->url),
+        ]);
     }
 }
