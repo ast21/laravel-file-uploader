@@ -1,6 +1,6 @@
 <?php
 
-namespace Aebitdev\FileUploader\Http\Controllers;
+namespace Ast21\FileUploader\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;

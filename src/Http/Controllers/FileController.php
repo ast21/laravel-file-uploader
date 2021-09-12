@@ -1,10 +1,10 @@
 <?php
 
-namespace Aebitdev\FileUploader\Http\Controllers;
+namespace Ast21\FileUploader\Http\Controllers;
 
-use Aebitdev\FileUploader\Http\Requests\FileUploadRequest;
-use Aebitdev\FileUploader\Http\Services\FileService;
-use Aebitdev\FileUploader\Models\File;
+use Ast21\FileUploader\Http\Requests\FileUploadRequest;
+use Ast21\FileUploader\Http\Services\FileService;
+use Ast21\FileUploader\Models\File;
 
 class FileController extends Controller
 {

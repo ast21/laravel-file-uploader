@@ -1,6 +1,6 @@
 <?php
 
-namespace Aebitdev\FileUploader\Http\Requests;
+namespace Ast21\FileUploader\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

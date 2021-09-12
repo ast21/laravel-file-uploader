@@ -1,8 +1,8 @@
 <?php
 
-namespace Aebitdev\FileUploader\Http\Services;
+namespace Ast21\FileUploader\Http\Services;
 
-use Aebitdev\FileUploader\Models\File;
+use Ast21\FileUploader\Models\File;
 use Illuminate\Http\UploadedFile;
 
 class FileService

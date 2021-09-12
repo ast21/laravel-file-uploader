@@ -1,6 +1,6 @@
 <?php
 
-namespace Aebitdev\FileUploader;
+namespace Ast21\FileUploader;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;

@@ -6,12 +6,12 @@
 ```json
 {
     "require": {
-        "aebitdev/laravel-file-uploader": "^1.0"
+        "ast21/laravel-file-uploader": "^1.0"
     },
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/aebitdev/laravel-file-uploader"
+            "url": "https://github.com/ast21/laravel-file-uploader"
         }
     ],
 }
