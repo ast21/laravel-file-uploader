@@ -23,6 +23,7 @@ class FileController extends Controller
 
         return response()->json([
             'id' => $file->id,
+            'name' => $file->name,
             'url' => asset($file->url),
         ]);
     }
