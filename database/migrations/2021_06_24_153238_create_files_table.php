@@ -17,12 +17,12 @@ class CreateFilesTable extends Migration
             }
 
             $table->string('name');
-            $table->string('disk');
-            $table->string('path');
-            $table->string('url');
-            $table->string('type')->nullable()->default(null);
-            $table->string('mime_type')->nullable()->default(null);
-            $table->string('extension')->nullable()->default(null);
+            $table->string('disk')->nullable();
+            $table->string('path')->nullable();
+            $table->string('url')->nullable();
+            $table->string('type')->nullable();
+            $table->string('mime_type')->nullable();
+            $table->string('extension')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
