@@ -21,5 +21,8 @@
             ]
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {
+        "php-ffmpeg/php-ffmpeg": "v0.x-dev"
+    }
 }
