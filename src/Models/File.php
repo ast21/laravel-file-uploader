@@ -20,4 +20,9 @@ class File extends Model
             $model->user_id = Auth::id() ?? null;
         });
     }
+
+    public function thumbnail()
+    {
+        return $this->belongsTo(File::class, 'thumbnail_id');
+    }
 }

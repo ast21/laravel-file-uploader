@@ -32,7 +32,10 @@ class FileController extends Controller
 
         return response()->json([
             'id' => $fileModel->id,
-            'thumbnail_id' => $fileModel->thumbnail_id,
+            'thumbnail' => [
+                'id' => $fileModel->thumbnail->id,
+                'url' => $fileModel->thumbnail->url,
+            ],
             'name' => $fileModel->name,
             'url' => asset($fileModel->url),
         ]);
